@@ -1,12 +1,12 @@
 # Packet Sniffer
 
-Packet Sniffer is a Python script that implements a packet sniffer tool using the Scapy library. It captures packets from a specified network interface and displays either packet summaries or detailed information based on user preference.
+Packet Sniffer is a Python script that captures and analyzes network packets using the Scapy library. It provides two modes of operation: summary and detail. Additionally, it supports applying BPF filters to capture specific types of packets and saving the captured packets to an output file.
 
 ## Features
 
-- Capture packets from a specified network interface.
-- Display packet summaries or detailed information.
+- Capture and analyze network packets in summary or detail mode.
 - Apply BPF filter expressions to capture specific types of packets.
+- Save captured packets to an output file.
 - Command-line interface (CLI) for easy usage.
 
 ## Usage
@@ -20,7 +20,7 @@ To use the Packet Sniffer, follow these steps:
 
 2. Navigate to the project directory:
    ```bash
-   cd packet-sniffer
+   cd Packet-Sniffer
    ```
 
 3. Install the required dependencies:
@@ -33,10 +33,17 @@ To use the Packet Sniffer, follow these steps:
      ```bash
      python packet_sniffer.py eth0 summary
      ```
-   - Capture TCP packets on interface "eth0" in detail mode:
+   - Capture packets on interface "eth0" in detail mode and save them to an output file:
      ```bash
-     python packet_sniffer.py eth0 detail -f "tcp"
+     python packet_sniffer.py eth0 detail -o output.txt
      ```
+
+## Options
+
+- `interface`: The network interface to capture packets from.
+- `mode`: The mode of operation, either "summary" or "detail".
+- `-f`, `--filter`: Optional. BPF filter expression to capture specific types of packets.
+- `-o`, `--output`: Optional. Output file name to save captured packets.
 
 ## Requirements
 
@@ -46,4 +53,4 @@ To use the Packet Sniffer, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
