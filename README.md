@@ -15,7 +15,7 @@ To use the Packet Sniffer, follow these steps:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your_username/packet-sniffer.git
+   git clone https://github.com/SimranPabla/Packet-Sniffer.git
    ```
 
 2. Navigate to the project directory:
